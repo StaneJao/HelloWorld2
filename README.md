@@ -1,0 +1,3 @@
+# HelloWorld2
+Simple android Hello World project in Android Studio.
+Just trying to learn Android Studio & GitHub...
