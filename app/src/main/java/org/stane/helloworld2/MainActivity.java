@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
         // This is the layout file I am linking.
         setContentView(R.layout.activity_main);
-        Toast.makeText(MainActivity.this, "this is a message", Toast.LENGTH_SHORT).show();
-        Toast.makeText(MainActivity.this, "this is another message", Toast.LENGTH_SHORT).show();
+        String message = getString(R.string.message);
+        Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 }
