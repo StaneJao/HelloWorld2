@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ekran"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_yellow"
@@ -11,23 +12,54 @@
     tools:context="org.stane.helloworld2.MainActivity">
 
     <TextView
+        android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/message"
+        android:text="@string/btnHello_message"
         android:textColor="@color/blue"
         android:textSize="@dimen/msg_text_size"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="87dp" />
+        android:layout_marginTop="80dp"
+        android:layout_centerInParent="true" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/password"
+        android:layout_height="wrap_content"
+        android:inputType="textVisiblePassword|textNoSuggestions"
+        android:hint="Username"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password"/>
 
     <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/password"
+        android:text="@string/login"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:onClick="btnLogin_click"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exit"
-        android:id="@+id/btnExit"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="32dp"
         android:background="@color/magenta"
+        android:onClick="btnExit_click"
         android:layout_marginBottom="40dp" />
 </RelativeLayout>
